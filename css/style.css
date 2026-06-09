@@ -369,10 +369,24 @@ background: linear-gradient(90deg, rgba(30,101,234,0.7511379551820728) 23%, rgba
    
 }
 .bg-hero_accesos {
-    background: url(../img/bg_accesos.jpg) top center no-repeat;
+    background: url(../img/bg_accesos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+     min-height: 35vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
+.hero-title{
+    color:#FFFFFF;
+    font-weight:800;
+    text-shadow:0 6px 15px rgba(0,0,0,.7);
+    letter-spacing:1px;
+}
+
 .bg-hero_expos {
     background: url(../img/bg_expos.jpg) top center no-repeat;
     background-size: cover;
@@ -529,6 +543,7 @@ linear-gradient(90deg, rgba(30,101,234,0.7511379551820728) 23%, rgba(116,119,61,
         padding-bottom: 80px;
         padding-left: 10px;
         transition: .5s;
+        
     }
     .cardsevent-item2 {
         position: relative;
@@ -636,12 +651,20 @@ linear-gradient(90deg, rgba(30,101,234,0.7511379551820728) 23%, rgba(116,119,61,
 .titlescards{
     color:#0719A8;
     padding-bottom: 20px;
+    
 }
 .titlescards1{
     color:#0719A8;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     font-size: 18px;
+    text-align: justify;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-left: 50px;
+    
 }
+
+
 .cardsevent-item {
     position: relative;
     padding-right: 80px;
@@ -665,6 +688,7 @@ linear-gradient(90deg, rgba(30,101,234,0.7511379551820728) 23%, rgba(116,119,61,
     padding-bottom: 90px;
     padding-left: 40px;
     transition: .5s;
+    
 }
 .cardventas {
     position: relative;
@@ -695,6 +719,7 @@ linear-gradient(90deg, rgba(30,101,234,0.7511379551820728) 23%, rgba(116,119,61,
     padding-bottom: 10px;
     font-size: 13px;
     padding: 0px 30px;
+    
 }
 .text-justifyp{
     text-align: justify;
@@ -1654,7 +1679,7 @@ h6,
 
 @media (min-width: 767.98px) {
     .footer-about {
-        margin-bottom: -75px;
+        margin-bottom: 0px;
         --bs-gutter-x: 120px !important;
     }
 .text_v{
@@ -2003,4 +2028,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border: 2px solid #CACFD6;
   background-size: 100px 50px;
   box-sizing: border-box;
+}
+
+
+.texto-destacado{
+    background: #f5f5f5;
+    border-left: 10px solid #478bcf;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
 }
