@@ -40,7 +40,7 @@
 
 .hero-content h2{
     font-size:70px;
-    color: aqua;
+    color: wheat;
     margin:20px 0;
     font-weight:800;
 }
@@ -58,4 +58,8 @@
 
 .hero-content button:hover{
     background:#0057d9;
+}
+
+.bg-gray{
+    background-color: azure;
 }
