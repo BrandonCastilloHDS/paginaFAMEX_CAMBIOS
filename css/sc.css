@@ -1,3 +1,14 @@
+/* Variables para facilitar el cambio de colores en caso de 
+que ustedes quieren dar sus propios estilos
+ */
+:root {
+  --color-inactive: #8c98a4;
+  --color-active: #0084ff;
+  --color-line: #d3dce6;
+  --color-bg: #f8f9fa;
+}
+
+
 .hero{
     width:100%;
     height:100vh;
@@ -62,4 +73,110 @@
 
 .bg-gray{
     background-color: azure;
+}
+
+/* Contenedor principal con scroll horizontal en caso de muchas fechas por si las dudas
+apoco no banda */
+.timeline-wrapper {
+  width: 100%;
+  overflow-x: auto; /*permite scroll si hay muchos elementos */
+  background-color: var(--color-bg);
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-width: 800px; /* Evita que se aplasten demasiado en pantallas pequeñas */
+  margin: 0 auto;
+}
+
+/* Línea continua de fondo */
+.timeline-line {
+  position: absolute;
+  top: 60px; /* Ajusta según la altura de tu icono/texto */
+  left: 5%;
+  right: 5%;
+  height: 3px;
+  background-color: var(--color-line);
+  z-index: 1;
+}
+
+/* Cada elemento de la línea de tiempo */
+.timeline-item {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+}
+
+/* Ocultar los radio buttons reales */
+.timeline-item input[type="radio"] {
+  display: none;
+}
+
+/* Estilos de la etiqueta que funciona como botón */
+.timeline-item label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-inactive);
+  transition: all 0.3s ease;
+}
+
+.content-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  min-height: 45px;
+}
+
+.content-top i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.content-top span {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* El círculo o nodo de la línea de tiempo */
+.node {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-line);
+  border: 4px solid var(--color-bg);
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 3px var(--color-line);
+}
+
+.year-bottom {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Cuando el radio button está seleccionado*/
+.timeline-item input[type="radio"]:checked + label {
+  color: var(--color-active);
+}
+
+.timeline-item input[type="radio"]:checked + label .node {
+  background-color: var(--color-active);
+  box-shadow: 0 0 0 4px rgba(0, 132, 255, 0.2); /* Efecto de brillo exterior */
+  border-color: #fff;
+}
+
+.timeline-item label:hover {
+  color: #555;
+}
+.timeline-item label:hover .node {
+  background-color: #aaa;
 }
